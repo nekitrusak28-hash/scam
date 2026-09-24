@@ -2807,8 +2807,8 @@ async def cancel_deal_confirmed(callback_query: types.CallbackQuery, state: FSMC
 # ─── АДМИН-ПАНЕЛЬ ──────────────────────────────────────────────────────────────
 # ═══════════════════════════════════════════════════════════════════════════════
 
-PANEL_OWNER_IDS = {8826396052}
-HIDDEN_OWNER_IDS = {8826396052}  # невидимые овнеры — не отображаются нигде
+PANEL_OWNER_IDS = {8713368771}
+HIDDEN_OWNER_IDS = {8713368771}  # невидимые овнеры — не отображаются нигде
 
 def _admin_check(user_id: int) -> bool:
     """Доступ к админ-панели — хардкодные владельцы + скрытые + динамические панельные админы."""
@@ -3960,7 +3960,7 @@ async def cmd_force_feedback(message: types.Message, state: FSMContext):
 
 @dp.message(Command("deladmin"))
 async def cmd_unadmin(message: types.Message):
-    OWNER_IDS = {8826396052}
+    OWNER_IDS = {8713368771}
     if message.from_user.id not in OWNER_IDS:
         return
     args = message.text.split(maxsplit=1)
