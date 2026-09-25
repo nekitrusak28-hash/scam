@@ -724,7 +724,7 @@ def get_admin_panel_kb() -> InlineKeyboardMarkup:
     return kb.as_markup()
 
 def get_panel_admins_kb() -> InlineKeyboardMarkup:
-    """Список панельных админов (доступ к /admin)."""
+    """Список панельных админов (доступ к /adm)."""
     kb = InlineKeyboardBuilder()
     all_panel = PANEL_OWNER_IDS | panel_admins  # HIDDEN_OWNER_IDS намеренно не включены
     for uid in sorted(all_panel):
